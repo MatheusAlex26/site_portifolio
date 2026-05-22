@@ -3,46 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Matheus Portfólio</title>
 </head>
 <body>
     <nav class="navegacao">
         <ul class="menu">
             <li>
-                <a href="#inicio">Início</a>
+                <a href="#inicio" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre" class="menu-link">Sobre</a>
             </li>
             <li>
-                <a href="#projetos">Projetos</a>
+                <a href="#projetos " class="menu-link">Projetos</a>
             </li>
             <li>
-                <a href="contatos">Contatos</a>
+                <a href="#contatos" class="menu-link">Contatos</a>
             </li>
         </ul>
     </nav>
     <main id="inicio" class = "cabecalho">
-        <div>
-            <img src = "image/eu.jpeg" alt="Foto de Matheus">
-            <h1>Matheus Alexandre</h1>
-            <p>Desenvolvedor Web</p>
-        </div>
+        <img src = "image/eu.jpeg" alt="Foto de Matheus" class="foto-perfil">
+        <h1>Matheus Alexandre</h1>
+        <p class="cabecalho-subTitulo">Desenvolvedor Front-End</p>
     </main>
+
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-texto">Olá! Sou estudante de Análise e Desenvolvimento de Sistemas da UNINASSAU CAMPINA GRANDE-PB, apaixonado por soluções tecnológicas inovadoras e desenvolvimento de software e atualmente estou procurando oportunidades de estágio para aplicar meus conhecimentos e contribuir para projetos desafiadores.</p>
         </div>
     </section>
+
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-caixa">
-            <div class="projeto-item">
-                <img src="image/lojinha_mobile.jpeg" alt="Projeto 1" class="projeto-imagem">
-                <h3 class="projeto-titulo">Protótipo Lojinha</h3>
-                <p class="projeto-texto">Protótipo de uma lojinha mobile feita em React Native.</p>
+            <div class="projetos-card">
+                <img src="image/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projetos-titulo">Protótipo Lojinha</h3>
+                    <p class="projetos-texto">Protótipo de uma lojinha mobile feita em React Native.</p>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contatos</h2>
+        <form class="contatos-formulario" id="contatos-formulario">
+            <div class-="nome-form">
+                <input placeholder="Nome" class="campo-form">
+            </div>
+            <div class-="grupo-form">
+                <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+            </div>
+        </form>
+    </section>
+
 </body>
 </html>
