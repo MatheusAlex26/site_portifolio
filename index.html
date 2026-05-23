@@ -7,6 +7,7 @@
     <title>Matheus Portfólio</title>
 </head>
 <body>
+    <div class="particulas"></div>
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -50,16 +51,33 @@
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="contatos-formulario" id="contatos-formulario">
-            <div class-="nome-form">
-                <input placeholder="Nome" class="campo-form">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="contatos-formulario" id="contatos-formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
-            <div class-="grupo-form">
-                <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem"></textarea>
             </div>
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
         </form>
     </section>
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5583987259866';
 
+            const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            console.log(url);
+
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
